@@ -42,3 +42,20 @@
 //  - message - повідомлення про стан замовлення у форматі "Ви знайдете droids worth <total price> credits. Delivery (<delivery fee> credits) is included in total price."
 // Використовуй синтаксис шаблонних рядків.
 // Виведи значення message в консоль.
+
+// 7. Приведи значення змінної до верхнього та нижнього регістру та виведи значення у консоль
+
+const text = "Please wait for The Server";
+
+// 8. Приведи значення змінних до числа та помнож їх
+
+const num1 = "5";
+
+const num2 = 10;
+
+const num3 = "8";
+
+// 9. Напиши тернарний оператор порівняня двох змінних та виведи більше значення у консоль
+
+const number1 = 3;
+const number2 = 8;
