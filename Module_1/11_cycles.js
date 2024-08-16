@@ -15,20 +15,20 @@
 
 // Створимо лічильник
 
-let counter = 0;
+// let counter = 0;
 
-while (counter < 5) {
-  counter += 1;
-  console.log("counter: ", counter);
-}
+// while (counter < 5) {
+//   counter += 1;
+//   console.log("counter: ", counter);
+// }
 
-let clientCounter = 18;
-const maxClients = 25;
+// let clientCounter = 18;
+// const maxClients = 25;
 
-while (clientCounter < maxClients) {
-  clientCounter += 1;
-  console.log(clientCounter);
-}
+// while (clientCounter < maxClients) {
+//   clientCounter += 1;
+//   console.log(clientCounter);
+// }
 
 // --------- Цикл do...while
 
@@ -42,13 +42,13 @@ while (clientCounter < maxClients) {
 
 // Блок-схема ілюструє цикл do-while
 
-let password = "";
+// let password = "";
 
-do {
-  password = "124512";
-} while (password.length < 5);
+// do {
+//   password = "124512";
+// } while (password.length < 5);
 
-console.log("Ввели пароль: ", password);
+// console.log("Ввели пароль: ", password);
 
 // -----   Цикл for
 
@@ -69,23 +69,23 @@ console.log("Ввели пароль: ", password);
 // - Пост-вираз (post-expression) - виконується в кінці кожного повторення циклу, до перевірки умови. Використовується для оновлення змінної-лічильника.
 // - Змінні-лічильники, за традицією, називаються літерами i, j і k.
 
-for (let i = 0; i <= 20; i += 5) {
-  console.log(i);
-}
+// for (let i = 0; i <= 20; i += 5) {
+//   console.log(i);
+// }
 
 // У прикладі оголошується змінна-лічильник i, ініціалізується значенням 0 і цикл виконується доти, доки i <= 20, тобто умова приводиться до true.
 // Після кожної ітерації лічильник збільшується на 5.
 
 // Порахуємо суму чисел до певного значення.
 
-const target = 3;
-let sum = 0;
+// const target = 3;
+// let sum = 0;
 
-for (let i = 0; i <= target; i += 1) {
-  sum += i;
-}
+// for (let i = 0; i <= target; i += 1) {
+//   sum += i;
+// }
 
-console.log(sum);
+// console.log(sum);
 
 // Згадаємо про операцію a % b і виведемо остачу від ділення за допомогою циклу.
 
@@ -93,6 +93,13 @@ const max = 10;
 for (let i = 0; i < max; i += 1) {
   console.log(`${max} % ${i} = `, max % i);
 }
+const items = [1, 2, 3, 4, 5];
+
+// for (item of items) {
+//   if (item === 2) {
+//   console.log(items)
+// }
+// }
 
 // Звідси виводиться остача від ділення кожного числа від 0 до 9.
 
@@ -102,16 +109,16 @@ for (let i = 0; i < max; i += 1) {
 
 // Знайдемо число 3. Щойно виконається умова if, цикл припинить своє виконання (буде перерваний).
 
-for (let i = 0; i <= 5; i += 1) {
-  console.log(i);
+// for (let i = 0; i <= 5; i += 1) {
+//   console.log(i);
 
-  if (i === 3) {
-    console.log("Знайшли число 3, перериваємо виконання циклу");
-    break;
-  }
-}
+//   if (i === 3) {
+//     console.log("Знайшли число 3, перериваємо виконання циклу");
+//     break;
+//   }
+// }
 
-console.log("Лог після циклу");
+// console.log("Лог після циклу");
 
 // Оператор continue
 
@@ -121,9 +128,11 @@ console.log("Лог після циклу");
 // Використовуємо цикл для введення тільки непарних чисел. Для парних i спрацьовує continue, виконання тіла припиняється і управління передається до наступної ітерації.
 
 const number = 10;
+let numOfcycle = 0;
 
 for (let i = 0; i < number; i += 1) {
   if (i % 2 === 0) {
+    numOfcycle += 1;
     continue;
   }
 

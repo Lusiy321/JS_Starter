@@ -13,6 +13,33 @@ if (true) {
 
 console.log("Global scope: ", value); // 5
 
+// function foo() {
+//   const item = 1;
+//   function foo2() {
+//     const item = 2;
+//     function foo3() {
+//       const item = 3;
+//     }
+//   }
+// }
+
+// class User {
+//   constructor() {
+//     const item = 1;
+//   }
+
+//   fetchUsers() {
+//     const user = new User();
+//   }
+
+//   fetchName() {
+//     const user = "Nickname";
+//     const concat = user + item;
+//   }
+// }
+
+// User.fetchUsers();
+
 // Будь-яка конструкція, яка використовує фігурні дужки {} (умови, цикли, функції тощо), створює нову локальну область видимості,
 // і змінні, оголошені в цій області видимості, з використанням let або const, - недоступні за межами цього блоку.
 
@@ -35,31 +62,31 @@ console.log("Global scope: ", value); // 5
 
 // const global = "global";
 
-// if (true) {
-//   const blockA = "block A";
+if (true) {
+  const blockA = "block A";
 
-//   // Бачимо глобальну + локальну A
-//   console.log(global); // 'global'
-//   console.log(blockA); // block A
+  // Бачимо глобальну + локальну A
+  console.log(global); // 'global'
+  console.log(blockA); // block A
 
-//   // Змінні blockB і blockC не знайдені в доступних областях видимості.
-//   // Буде помилка звернення до змінної.
-//   console.log(blockB); // ReferenceError: blockB is not defined
-//   console.log(blockC); // ReferenceError: blockC is not defined
+  // Змінні blockB і blockC не знайдені в доступних областях видимості.
+  // Буде помилка звернення до змінної.
+  console.log(blockB); // ReferenceError: blockB is not defined
+  console.log(blockC); // ReferenceError: blockC is not defined
 
-//   if (true) {
-//     const blockB = "block B";
+  if (true) {
+    const blockB = "block B";
 
-//     // Бачимо глобальну + зовнішню A + локальну B
-//     console.log(global); // global
-//     console.log(blockA); // block A
-//     console.log(blockB); // block B
+    // Бачимо глобальну + зовнішню A + локальну B
+    console.log(global); // global
+    console.log(blockA); // block A
+    console.log(blockB); // block B
 
-//     // Змінна blockC не знайдена в доступних областях видимості.
-//     // Буде помилка звернення до змінної.
-//     console.log(blockC); // ReferenceError: blockC is not defined
-//   }
-// }
+    // Змінна blockC не знайдена в доступних областях видимості.
+    // Буде помилка звернення до змінної.
+    console.log(blockC); // ReferenceError: blockC is not defined
+  }
+}
 
 // if (true) {
 //   const blockC = "block C";

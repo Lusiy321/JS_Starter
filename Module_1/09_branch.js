@@ -35,11 +35,11 @@ if (true) {
 
 // ---------   Інструкція if...else
 
-if (true) {
-  // тіло if
-} else {
-  // тіло else
-}
+// if (true) {
+//   // тіло if
+// } else {
+//   // тіло else
+// }
 
 // Розширює синтаксис if таким чином, що якщо умова приводиться до false, виконається код у фігурних дужках після оператора else.
 
@@ -74,20 +74,32 @@ if (true) {
 //Блок else...if дозволяє додати після else ще один оператор if з умовою. В кінці ланцюжка може бути класичний блок else,
 // який виконається лише у тому випадку, якщо жодна умова не приведеться до true.
 
-// let item;
-// const level = "premium";
+let item;
+const level = "premium";
 
-// if (level === "free") {
-//   item = 0;
-// } else if (level === "pro") {
-//   item = 100;
-// } else if (level === "premium") {
-//   item = 500;
-// } else {
-//   console.log("Invalid level type");
-// }
+if (level === "free") {
+  item = 0;
+} else if (level === "pro") {
+  item = 100;
+} else if (level === "premium") {
+  item = 500;
+} else {
+  console.log("Invalid level type");
+}
 
-// console.log(item); // 500
+if (level === "free") {
+  item = 0;
+}
+console.log("object");
+
+if (level === "pro") {
+  item = 100;
+  if (item === 100) {
+    console.log("object");
+  }
+}
+
+console.log(item); // 500
 
 // При першому true перевірки припиняться і виконається лише один сценарій, який відповідає цьому true.
 // Тому, такий запис варто читати як: шукаю перший збіг умови, ігнорую все інше.
