@@ -1,61 +1,71 @@
 "use strict";
-// Масиви
+// // Масиви
 
-// Масив - структура даних для зберігання і маніпулювання колекцією індексованих значень.
-// Використовується для зберігання впорядкованих колекцій даних, наприклад, списку курортів, товарів, клієнтів в готелі тощо.
+// // Масив - структура даних для зберігання і маніпулювання колекцією індексованих значень.
+// // Використовується для зберігання впорядкованих колекцій даних, наприклад, списку курортів, товарів, клієнтів в готелі тощо.
 
-// Створення
+// // Створення
 
-// Масив оголошується і береться у квадратні дужки [] - літералом масиву. Всередині дужок кожен елемент масиву розділяється комою.
+// // Масив оголошується і береться у квадратні дужки [] - літералом масиву. Всередині дужок кожен елемент масиву розділяється комою.
 
-const clients = ["Mango", "Poly", "Ajax"];
+// const clients = ["Mango", "Poly", "Ajax"];
 
-// Доступ до елементів
+// // Доступ до елементів
 
-// Для доступу до значення елемента масиву використовується синтаксис квадратних дужок масив[індекс].
-// Між іменем змінної, що зберігає масив, і квадратними дужками не повинно бути пробілу.
+// // Для доступу до значення елемента масиву використовується синтаксис квадратних дужок масив[індекс].
+// // Між іменем змінної, що зберігає масив, і квадратними дужками не повинно бути пробілу.
 
-// Індексація елементів масиву починається з нуля 0.
+// // Індексація елементів масиву починається з нуля 0.
 
-// Зазначаючи в дужках індекс елемента, ми отримуємо його значення
-console.log(clients[0]); // Mango
-console.log(clients[1]); // Poly
-console.log(clients[2]); // Ajax
+// const obj = {
+//   name: "John",
+//   age: 30,
+//   isStudent: true,
+//   img: [
+//     { id: 2, url: "http://gooopjs.org/" },
+//     { id: 3, url: "http://fds.google.com" },
+//   ],
+// };
+// console.log(obj.img[0].id);
+// // Зазначаючи в дужках індекс елемента, ми отримуємо його значення
+// console.log(clients[0]); // Mango
+// console.log(clients[1]); // Poly
+// console.log(clients[2]); // Ajax
 
-// Зміна значення елемента
+// // Зміна значення елемента
 
-// На відміну від рядків, елементи масиву можна змінювати, звернувшись до них за індексом і присвоївши інше значення.
+// // На відміну від рядків, елементи масиву можна змінювати, звернувшись до них за індексом і присвоївши інше значення.
 
-// Ми можемо змінити значення елемента масиву зі знаком присвоєння.
+// // Ми можемо змінити значення елемента масиву зі знаком присвоєння.
 
-clients[0] = "Kiwi";
-clients[1] = "Pango";
-console.log(clients); // ["Kiwi", "Pango", "Ajax"]
+// clients[0] = "Kiwi";
+// clients[1] = "Pango";
+// console.log(clients); // ["Kiwi", "Pango", "Ajax"]
 
-// Довжина масиву
+// // Довжина масиву
 
-// Довжина масиву, тобто кількість його елементів, зберігається у властивості length.
-// Це динамічна величина, яка змінюється автоматично під час додавання або видалення елементів.
+// // Довжина масиву, тобто кількість його елементів, зберігається у властивості length.
+// // Це динамічна величина, яка змінюється автоматично під час додавання або видалення елементів.
 
-console.log(clients.length); // 3
+// console.log(clients.length); // 3
 
-// Індекс останнього елемента
+// // Індекс останнього елемента
 
-// Найчастіше, ми заздалегідь не знаємо яка буде довжина масиву в коді.
-// Для того, щоб отримати значення останнього елемента, застосовується наступний підхід - довжина масиву завжди на одиницю більша, ніж індекс останнього елемента.
-// Використовуючи формулу довжина_масиву - 1, можна отримати значення останнього елемента масиву довільної довжини.
+// // Найчастіше, ми заздалегідь не знаємо яка буде довжина масиву в коді.
+// // Для того, щоб отримати значення останнього елемента, застосовується наступний підхід - довжина масиву завжди на одиницю більша, ніж індекс останнього елемента.
+// // Використовуючи формулу довжина_масиву - 1, можна отримати значення останнього елемента масиву довільної довжини.
 
-const lastElementIndex = clients.length - 1;
-console.log(lastElementIndex); // 2
-console.log(clients[lastElementIndex]); // "Ajax"
+// const lastElementIndex = clients.length - 1;
+// console.log(lastElementIndex); // 2
+// console.log(clients[lastElementIndex]); // "Ajax"
 
-// Ітерація по масиву
+// // Ітерація по масиву
 
-// Цикл for можна використовувати для ітерації по масиву, тобто «перебрати» його поелементно.
+// // Цикл for можна використовувати для ітерації по масиву, тобто «перебрати» його поелементно.
 
-for (let i = 0; i < clients.length; i += 1) {
-  console.log(clients[i]);
-}
+// for (let i = 0; i < clients.length; i += 1) {
+//   console.log(clients[i]);
+// }
 
 // Для доступу до елементів використовується синтаксис квадратних дужок масив[індекс],
 // де індекс - це значення лічильника циклу від 0 і до останнього індексу масиву, тобто менше, але не дорівнює його довжині.
@@ -65,24 +75,26 @@ for (let i = 0; i < clients.length; i += 1) {
 // Конструкція for...of оголошує цикл, що перебирає ітерабельні об'єкти, як-от масиви і рядки.
 // Тіло циклу буде виконуватися для значення кожного елемента.Це хороша заміна циклу for, якщо не потрібен доступ до лічильника ітерації.
 
-for (const variable of iterable) {
-  // тіло циклу
-}
+// for (const variable of iterable) {
+//   // тіло циклу
+// }
 
 // variable — змінна, яка буде зберігати значення елемента на кожній ітерації.
 // iterable — колекція, яка містить ітерабельні (що можна порахувати) елементи, наприклад масив.
 
-for (const client of clients) {
-  console.log(client);
-}
+// for (const client of clients) {
+//   console.log(client);
+// }
 
-const string = "javascript";
+// const string = "javascript";
+// let arr1 = [];
 
-for (const character of string) {
-  console.log(character);
-}
-
-// Оператори break і continue
+// for (const character of string) {
+//   arr1.push(character);
+//   console.log(character);
+// }
+// console.log(arr1);
+// // Оператори break і continue
 
 // Будемо шукати ім'я клієнта в масиві імен, якщо знайшли - перериваємо цикл, оскільки немає сенсу шукати далі, імена у нас унікальні.
 
@@ -170,6 +182,45 @@ console.log(user.split("")); // ["M", "a", "n", "g", "o"]
 
 const mess = "JavaScript - це цікаво";
 console.log(mess.split(" ")); // ["JavaScript", "-", "це", "цікаво"]
+
+// const dataUser =
+//   "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbiIsImlkIjoxLCJyb2xlIjoiYWRtaW4iLCJleHAiOjE3MjQwODUxMTF9.O0BNKqxxWeVna_RWsAqmdCol-CzwmvARsLOzDGORtIw";
+
+// const [method, token] = dataUser.split(" ");
+
+// async function create(user) {
+//   try {
+//     const { email, password, phone, firstName } = user;
+//     if (email && password && phone && firstName) {
+//       const lowerCaseEmail = email.toLowerCase();
+
+//       const registrationUser = await this.userModel.findOne({
+//         email: lowerCaseEmail,
+//       });
+//       if (registrationUser) {
+//         throw new Conflict(`User with ${email} in use`);
+//       }
+//       const trialEnds = new Date();
+//       trialEnds.setMonth(trialEnds.getMonth() + 2);
+
+//       const createdUser = await this.userModel.create({
+//         ...user,
+//         trial: true,
+//         trialEnds,
+//         paidEnds: trialEnds,
+//       });
+//       createdUser.setPassword(password);
+//       createdUser.save();
+//       await this.createToken(createdUser);
+//       await this.sendVerificationEmail(email);
+//       return await this.userModel.findById(createdUser._id).select(rows).exec();
+//     } else {
+//       throw new BadRequest("Missing parameters");
+//     }
+//   } catch (e) {
+//     throw e;
+//   }
+// }
 
 // Метод масивів join(delimiter) об'єднує елементи масиву у рядок.
 // У рядку елементи будуть розділені символом або групою символів, зазначених в delimiter.Тобто ця операція протилежна методу рядків split(delimiter).
@@ -374,6 +425,7 @@ console.log(languages); // ["C", "Python", "C#", "Swift", "Go", "JavaScript"]
 const oldClients = ["Mango", "Ajax", "Poly", "Kiwi"];
 const newClients = ["Monkong", "Singu"];
 
+const newArrClients = oldClients.push(...newClients);
 const allClientsWithOldFirst = oldClients.concat(newClients);
 console.log(allClientsWithOldFirst); // ["Mango", "Ajax", "Poly", "Kiwi", "Monkong", "Singu"]
 
