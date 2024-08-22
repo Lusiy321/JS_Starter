@@ -1,5 +1,7 @@
 // Об'єкти
-// Об'єкти дозволяють описати і згрупувати характеристики певної сутності - користувача, книги, продукту в магазині, чого завгодно. Об'єкти ще називають словниками, тобто вони містять терміни (властивості) та їх визначення (значення).
+
+// Об'єкти дозволяють описати і згрупувати характеристики певної сутності - користувача, книги, продукту в магазині, чого завгодно.
+// Об'єкти ще називають словниками, тобто вони містять терміни (властивості) та їх визначення (значення).
 
 // Створення об'єкта
 
@@ -56,11 +58,23 @@ const user = {
   location: {
     country: "Jamaica",
     city: "Ocho Rios",
+    do: [
+      {
+        title: "The Last Kingdom",
+        author: "Bernard Cornwell",
+        genres: ["historical prose", "adventure"],
+        isPublic: true,
+        rating: 8.38,
+      },
+      "music",
+      "sci-fi",
+    ],
   },
   hobbies: ["swiming", "music", "sci-fi"],
 };
 
-const location = user.location;
+const location = user.location.do[0].author;
+// const location = user.location.do.pop();
 console.log(location); // Об'єкт location
 
 const country = user.location.country;
@@ -89,10 +103,11 @@ console.log(numberOfHobbies); // 3
 // Якщо в об'єкті відсутня властивість з таким ім'ям, на місці звернення повернеться undefined.
 
 const bookTit = book["title"];
+const bookTt = book.title;
 console.log(bookTit); // 'The Last Kingdom'
 
-const bookGenr = book["genres"];
-console.log(bookGenr); // ['historical prose', 'adventurs']
+const bookArr = book["genres"];
+console.log(bookArr); // ['historical prose', 'adventurs']
 
 const propKey = "author";
 const bookAuthor = book[propKey];
@@ -129,11 +144,11 @@ console.log(book.translations); // ['ua', 'ru']
 
 // Синтаксис у наступному прикладі занадто громіздкий, тому що доводиться дублювати ім'я властивості та ім'я змінної, в якій зберігається потрібне значення.
 
-const name = "Генрі Сибола";
+const firstName = "Генрі Сибола";
 const age = 25;
 
 const author = {
-  name: name,
+  name: firstName,
   age: age,
 };
 
@@ -159,6 +174,13 @@ const man = {
 man[propName] = "Генрі Сибола";
 console.log(man.name); // 'Генрі Сибола'
 
+// export class User {
+//   email: string;
+//   password: string;
+//   firstName: string;
+//   phone: string;
+// }
+
 // Синтаксис обчислювальних властивостей(computed properties) допомагає уникнути зайвого коду і, в деяких випадках, спростити його.
 // Значенням обчислювальної властивості може бути будь - який валідний вираз.
 
@@ -178,11 +200,15 @@ const bookShelf = {
 
   getBooks() {
     console.log("Цей метод буде повертати всі книги - властивість books");
+    return this.books;
   },
 
   // Це метод об'єкта
 
   addBook(bookName) {
+    const arr = this.getBooks();
+    arr.push(bookName);
+    this.books.push(...arr);
     console.log("Цей метод буде додавати нову книгу у властивість books");
   },
 };
@@ -296,7 +322,7 @@ console.log(dog.legs); // 4
 console.log("name" in dog); // true
 console.log("legs" in dog); // true
 
-// ✅ Повертає true тільки для власних властивостей
+// Повертає true тільки для власних властивостей
 console.log(dog.hasOwnProperty("name")); // true
 console.log(dog.hasOwnProperty("legs")); // false
 
@@ -368,7 +394,8 @@ console.log(entries);
 
 // Масив об'єктів
 
-// Стандартний набір повсякденних завдань розробника містить маніпуляцію масивом однотипних об'єктів. Це означає, що всі об'єкти в масиві гарантовано матимуть однаковий набір властивостей, але з різними значеннями.
+// Стандартний набір повсякденних завдань розробника містить маніпуляцію масивом однотипних об'єктів.
+// Це означає, що всі об'єкти в масиві гарантовано матимуть однаковий набір властивостей, але з різними значеннями.
 
 const books = [
   {
